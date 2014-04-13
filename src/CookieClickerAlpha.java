@@ -24,9 +24,9 @@ public class CookieClickerAlpha
 		{
 			fileStream = new FileInputStream("B-small.in");
 			fileReader = new BufferedReader(new InputStreamReader(fileStream, Charset.forName("UTF-8")));
-			numEntries = Byte.parseByte(fileReader.readLine());
+			numEntries = Integer.parseInt(fileReader.readLine());
 			
-			for (byte b = 1; b <= numEntries; b++)
+			for (int i = 1; i <= numEntries; i++)
 			{
 				lineParts = fileReader.readLine().split(" ");
 				costPerFarm = Double.parseDouble(lineParts[0]);
@@ -43,7 +43,7 @@ public class CookieClickerAlpha
 				}
 				
 				currentTime += cookiesToWin / cookiesPerSec;
-				System.out.println(String.format("Case #%d: %.7f", b, currentTime));
+				System.out.println(String.format("Case #%d: %.7f", i, currentTime));
 			}
 		}
 		catch (FileNotFoundException e)

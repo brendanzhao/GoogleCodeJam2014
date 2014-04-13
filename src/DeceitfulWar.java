@@ -27,7 +27,7 @@ public class DeceitfulWar
 		{
 			fileStream = new FileInputStream("D-small.in");
 			fileReader = new BufferedReader(new InputStreamReader(fileStream, Charset.forName("UTF-8")));
-			numEntries = Byte.parseByte(fileReader.readLine());
+			numEntries = Integer.parseInt(fileReader.readLine());
 			
 			for (int i = 1; i <= numEntries; i++)
 			{
