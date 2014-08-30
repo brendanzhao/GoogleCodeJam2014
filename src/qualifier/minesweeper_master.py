@@ -46,5 +46,5 @@ def mine_sweeper_master(r, c, m):
 if __name__ == '__main__':
   for case in xrange(1, get_int() + 1):
     r, c, m = get_ints()
-    print 'Case %d:' % case
+    print 'Case #%d:' % case
     print mine_sweeper_master(r, c, m)
